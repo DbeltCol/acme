@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 class DriverStoreUseCase implements IStore
 {
-    public function store(array $data):Driver
+    public function store(array $data)
     {
         return Driver::create($data);
     }

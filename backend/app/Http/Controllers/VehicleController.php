@@ -20,7 +20,7 @@ class VehicleController extends Controller
     public function report()
     {
         return response([
-            'reports' => ReportResource::collection(Vehicle::all())
+            'reports' => ReportResource::collection(Vehicle::orderBy('id','DESC')->get())
         ], Response::HTTP_ACCEPTED);
     }
 }

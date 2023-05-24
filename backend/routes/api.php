@@ -1,8 +1,11 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\DriverController;
 use App\Http\Controllers\OwnerController;
+use App\Http\Controllers\TypeDocController;
 use App\Http\Controllers\VehicleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -28,7 +31,9 @@ Route::group(['middleware' => 'auth:api'], function(){
     Route::get('reporte', [VehicleController::class,'report']);
     Route::get('conductores', [DriverController::class,'getDrivers']);
     Route::get('propietarios', [OwnerController::class,'getOwners']);
-
+    Route::get('ciudades', [CityController::class,'getAll']);
+    Route::get('tipo-documentos', [TypeDocController::class,'getAll']);
+    Route::post('guardar-registro', [DataController::class,'store']);
     Route::post('conductores', [DriverController::class,'store']);
     Route::post('propietarios', [OwnerController::class,'store']);
 });

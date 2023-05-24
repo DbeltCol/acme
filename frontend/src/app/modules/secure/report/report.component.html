@@ -1,0 +1,25 @@
+<h2>Reporte</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Placa</th>
+        <th scope="col">Marca</th>
+        <th scope="col">Nombre completo conductor</th>
+        <th scope="col">Nombre completo propietario</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let report of reports">
+        <td>{{ report.id }}</td>
+        <td>{{ report.placa }}</td>
+        <td>{{ report.marca }}</td>
+        <td>{{ report.nombre_completo_conductor }}</td>
+        <td>{{ report.nombre_completo_propietario }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

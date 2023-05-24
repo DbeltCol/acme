@@ -1,0 +1,23 @@
+<main class="form-signin w-100 m-auto">
+  <form [formGroup]="loginForm">
+
+    <h1 class="h3 mb-3 fw-normal text-center">Acme</h1>
+
+    <div class="form-floating">
+      <input type="email" formControlName="email" class="form-control" id="floatingInput" placeholder="Correo@acme.com">
+      <label for="floatingInput">Correo</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" formControlName="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+      <label for="floatingPassword">Contraseña</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="submit()" [disabled]="loginForm.invalid">Inicie sesión</button>
+    <p class="mt-5 mb-3 text-body-secondary text-center">&copy; –2023</p>
+  </form>
+</main>

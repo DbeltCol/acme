@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 interface IStore
 {
-    public function store(array $array):Model;
+    public function store(array $array);
 }

@@ -7,9 +7,9 @@ use App\Interfaces\IStore;
 class StoreService
 {
 
-    public function store(IStore $output,array $data):void
+    public function store(IStore $output,array $data)
     {
-        $output->store($data);
+        return $output->store($data);
     }
 
 }

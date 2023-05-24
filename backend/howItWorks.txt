@@ -15,3 +15,11 @@
 2. execute migrations
 
     php artisan migrate --seed
+
+3. login with this credentials
+
+    email:admin@acme.co
+    password:Acme2023
+
+4. In Angular will find environment.ts you can update URL_SERVICES, by default is on port 8000
+

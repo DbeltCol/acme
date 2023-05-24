@@ -1,0 +1,180 @@
+<h2>Registrar Información</h2>
+
+<form [formGroup]="registerForm">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Placas</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="license_plate"
+        />
+      </div>
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Color</label>
+        <input class="form-control" type="text" formControlName="color" />
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Marca</label>
+        <input class="form-control" type="text" formControlName="brand" />
+      </div>
+      <div class="form-group">
+        <label for=""
+          ><span class="text-danger">*</span> Tipo de vehiculo</label
+        >
+        <select formControlName="type" class="form-control">
+          <option value="">Seleccione</option>
+          <option value="público">Particular</option>
+          <option value="público">Público</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <h4>Propietario</h4>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Primer Nombre</label>
+        <input class="form-control" type="text" formControlName="first_name" />
+      </div>
+
+      <div class="form-group">
+        <label for="">Segundo Nombre</label>
+        <input class="form-control" type="text" formControlName="second_name" />
+      </div>
+
+      <div class="form-group">
+        <label for=""
+          ><span class="text-danger">*</span> Número de Cédula</label
+        >
+        <input class="form-control" type="number" formControlName="document" />
+      </div>
+
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Ciudad</label>
+        <select formControlName="city" class="form-select">
+          <option value="">Seleccione</option>
+          <option *ngFor="let city of cities" value="{{ city.id }}">{{ city.title }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span>Apellidos</label>
+        <input class="form-control" type="text" formControlName="last_name" />
+      </div>
+
+      <div class="form-group">
+        <label for=""
+          ><span class="text-danger">*</span> Tipo de documento</label
+        >
+        <select formControlName="type_doc_id" class="form-select">
+          <option value="">Seleccione</option>
+          <option *ngFor="let typeDoc of typeDocs" value="{{ typeDoc.id }}">{{ typeDoc.code }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Dirección</label>
+        <input class="form-control" type="text" formControlName="direction" />
+      </div>
+
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Telefono</label>
+        <input class="form-control" type="number" formControlName="phone" />
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="row">
+    <h4>Conductor</h4>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Primer Nombre</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="first_name_driver"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="">Segundo Nombre</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="second_name_driver"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for=""
+          ><span class="text-danger">*</span> Número de Cédula</label
+        >
+        <input
+          class="form-control"
+          type="number"
+          formControlName="document_driver"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Ciudad</label>
+        <select formControlName="city_driver" class="form-select">
+          <option value="">Seleccione</option>
+          <option *ngFor="let city of cities" value="{{ city.id }}">{{ city.title }}</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span>Apellidos</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="last_name_driver"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for=""
+          ><span class="text-danger">*</span> Tipo de documento</label
+        >
+        <select formControlName="type_doc_id_driver" class="form-select">
+          <option value="">Seleccione</option>
+          <option *ngFor="let typeDoc of typeDocs" value="{{ typeDoc.id }}">{{ typeDoc.code }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Dirección</label>
+        <input
+          class="form-control"
+          type="text"
+          formControlName="direction_driver"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for=""><span class="text-danger">*</span> Telefono</label>
+        <input
+          class="form-control"
+          type="number"
+          formControlName="phone_driver"
+        />
+      </div>
+    </div>
+  </div>
+
+  <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="submit()" [disabled]="registerForm.invalid">Guardar</button>
+
+
+
+</form>

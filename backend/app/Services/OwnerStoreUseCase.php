@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Collection;
 
 class OwnerStoreUseCase implements IStore
 {
-    public function store(array $data):Owner
+    public function store(array $data)
     {
         return Owner::create($data);
     }

@@ -27,54 +27,6 @@ class Owner extends Model
      *
      */
 
-    protected function first_name(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => strtolower($value),
-            get: fn ($value) => ucwords($value)
-        );
-    }
-
-    protected function second_name(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => strtolower($value),
-            get: fn ($value) => ucwords($value)
-        );
-    }
-
-    protected function last_name(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => strtolower($value),
-            get: fn ($value) => ucwords($value)
-        );
-    }
-
-    protected function document(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => strtolower($value),
-            get: fn ($value) => strtolower($value)
-        );
-    }
-
-    protected function phone(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => strtolower($value),
-            get: fn ($value) => strtolower($value)
-        );
-    }
-
-
-    protected function direction(): Attribute
-    {
-        return new Attribute(
-            set: fn ($value) => strtolower($value),
-            get: fn ($value) => strtoupper($value)
-        );
-    }
 
 
     /**

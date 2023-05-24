@@ -20,8 +20,8 @@ class VehicleResource extends JsonResource
             'color' => $this->color,
             'marca' => $this->brand,
             'tipo_vehiculo' => $this->type,
-            'conductor' => $this->driver,
-            'propietario' => $this->owner,
+            'nombre_completo_conductor' => $this->driver->completeName(),
+            'nombre_completo_propietario' => $this->owner->completeName()
         ];
     }
 }

@@ -1,0 +1,31 @@
+<h2>Conductores</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Primer nombre</th>
+        <th scope="col">Segundo nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Tipo Documento</th>
+        <th scope="col">Documento</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Telefóno</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let driver of drivers">
+        <td>{{ driver.id }}</td>
+        <td>{{ driver.primer_nombre }}</td>
+        <td>{{ driver.segundo_nombre }}</td>
+        <td>{{ driver.apellidos }}</td>
+        <td>{{ driver.tipo_documento }}</td>
+        <td>{{ driver.documento }}</td>
+        <td>{{ driver.direccion }}</td>
+        <td>{{ driver.ciudad }}</td>
+        <td>{{ driver.telefono }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
