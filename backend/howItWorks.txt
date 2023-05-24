@@ -1,0 +1,17 @@
+/**
+ *
+ * Instalacion base ACME S.A.
+ *
+*/
+
+/** RUN MIGRATIONS */
+
+1. install passport keys and create client
+
+    php artisan passport:install
+
+    php artisan passport:client --personal
+
+2. execute migrations
+
+    php artisan migrate --seed
